@@ -1,0 +1,6 @@
+node_modules
+config/keys.dev.js
+.env
+
+client/etc
+client/node_modules
