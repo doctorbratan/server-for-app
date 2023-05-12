@@ -1,0 +1,26 @@
+<section>
+
+    <div class="loading">
+        <mat-spinner></mat-spinner>
+    </div>
+
+    <form  [formGroup]="user" (ngSubmit)="onSubmit()">
+        <img src="../../assets/img/logo.svg" alt="Logo">
+       <mat-form-field appearance="fill" class="input">
+            <mat-label>Логин</mat-label>
+            <input [disabled]="pennding"  matInput formControlName="login" required> 
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="input">
+            <mat-label>Пароль</mat-label>
+            <input [disabled]="pennding" matInput type="password" formControlName="password">
+        </mat-form-field>
+        <button 
+        mat-raised-button 
+        color="accent"
+        type="submit"
+        [disabled]="!user.valid"
+        >Войти</button>
+    </form>
+
+
+</section>
